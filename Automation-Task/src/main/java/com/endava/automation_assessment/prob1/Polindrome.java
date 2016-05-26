@@ -10,26 +10,35 @@ import java.nio.file.Paths;
 public class Polindrome {
 
 	public static boolean isPolindrome(String s) {
-		if (s.length() == 0 || s.length() == 1)
-			return true;
-		if (s.charAt(0) == s.charAt(s.length() - 1))
-			return isPolindrome(s.substring(1, s.length() - 1));
-		return false;
-	}
+
+			int n = s.length();
+		    for( int i = 0; i < n/2; i++ )
+		        if (s.charAt(i) != s.charAt(n-i-1)) return false;
+		    return true;    
+		}
+		
+//		if (s.isEmpty())
+//			return false;
+//
+//		if (s.length() == 0 || s.length() == 1)
+//			return true;
+//		if (s.charAt(0) == s.charAt(s.length() - 1))
+//			return isPolindrome(s.substring(1, s.length() - 1));
+//		return false;
+//	}
 
 	public static void main(String[] args) throws IOException, URISyntaxException {
 		ReadFile readFile = new ReadFile();
 		String input = readFile.readResourceFile("InputWords.txt");
-		Path path = Paths.get("src/main/resources/Output.txt");
+		Path path = Paths.get("src/test/resources/Prob1/ActualOutput.txt");
 
 		if (isPolindrome(input))
-
 			try (BufferedWriter writer = Files.newBufferedWriter(path)) {
-				writer.write(input + " : is a palindrome");
+				writer.write(input + " - palindrome");
 			}
 		else
 			try (BufferedWriter writer = Files.newBufferedWriter(path)) {
-				writer.write(input + " : is not a palindrome");
+				writer.write(input + " - not palindrome");
 			}
 	}
 }
