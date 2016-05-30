@@ -27,6 +27,15 @@ public class WriterFile {
 			}
 		}
 	}
+	public void writeToResourceFileNumbers(List<Integer> numbers, String fileName) throws IOException, URISyntaxException {
+		Path path = getTestResourcePath(fileName);
+
+		try (BufferedWriter writer = Files.newBufferedWriter(path)) {
+			for (Integer n : numbers) {
+				writer.write(n + " ");
+			}
+		}
+	}
 
 	private Path getTestResourcePath(String fileName) {
 		Path path = Paths.get("src/test/resources/" + fileName);

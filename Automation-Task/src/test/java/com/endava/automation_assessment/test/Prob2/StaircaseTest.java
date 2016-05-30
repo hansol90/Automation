@@ -15,13 +15,13 @@ import com.endava.automation_assessment.prob2.Staircase;
 public class StaircaseTest {
 
 	@Test
-	public void testSucess() throws IOException, URISyntaxException {
+	public void testSuccess() throws IOException, URISyntaxException {
 		ReaderFile readerFile = new ReaderFile();
 		String input = readerFile.readResourceFile("Prob2/Input.txt");
 		Integer number = Integer.valueOf(input);
 
-		Staircase staircase = new Staircase();
-		String result = staircase.computeStaircase(number);
+		
+		String result = Staircase.computeStaircase(number);
 		// System.out.println(result);
 
 		WriterFile writerFile = new WriterFile();
@@ -33,9 +33,8 @@ public class StaircaseTest {
 
 	@Test(expected = IllegalArgumentException.class)
 	public void testInvalidInputNumber() {
-		Staircase staircase = new Staircase();
 		int negativeNumber = -1;
-		staircase.computeStaircase(negativeNumber);
+		Staircase.computeStaircase(negativeNumber);
 	}
 
 }

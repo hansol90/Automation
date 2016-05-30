@@ -1,1 +1,1 @@
-abaa - not palindrome
+121 - palindrome

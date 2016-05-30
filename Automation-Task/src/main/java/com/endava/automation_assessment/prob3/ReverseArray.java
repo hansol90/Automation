@@ -2,6 +2,7 @@ package com.endava.automation_assessment.prob3;
 
 import java.util.ArrayList;
 import java.util.List;
+//Given an array of floating point numbers, inverse the elements of the array
 
 public class ReverseArray {
 
