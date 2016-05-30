@@ -7,6 +7,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+import com.endava.automation_assessment.common.ReaderFile;
+
 public class Polindrome {
 
 	public static boolean isPolindrome(String s) {
@@ -28,8 +30,8 @@ public class Polindrome {
 //	}
 
 	public static void main(String[] args) throws IOException, URISyntaxException {
-		ReadFile readFile = new ReadFile();
-		String input = readFile.readResourceFile("InputWords.txt");
+		ReaderFile readerFile = new ReaderFile();
+		String input = readerFile.readResourceFile("InputWords.txt");
 		Path path = Paths.get("src/test/resources/Prob1/ActualOutput.txt");
 
 		if (isPolindrome(input))
