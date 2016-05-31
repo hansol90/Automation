@@ -35,7 +35,7 @@ public class ReverseArrayTest {
 
 		String expected = readerFile.readResourceFile("Prob3/ExpectedOutput.txt");
 		String actual = readerFile.readResourceFile("Prob3/ActualOutput.txt");
-		assertThat(actual, IsEqual.equalTo(expected.trim()));
+		assertThat(actual.trim(), IsEqual.equalTo(expected.trim()));
 	}
 
 }

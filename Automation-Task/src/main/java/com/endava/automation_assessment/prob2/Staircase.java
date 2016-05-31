@@ -1,4 +1,6 @@
 package com.endava.automation_assessment.prob2;
+//Drawing a staircase structure - given the required height,
+//output a staircase as shown in the example
 
 public class Staircase {
 

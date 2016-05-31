@@ -1,4 +1,5 @@
 package com.endava.automation_assessment.prob1;
+//Given a string of characters, determine if it is a palindrome or not
 
 public class Palindrome {
 	// Non Recursive method:
