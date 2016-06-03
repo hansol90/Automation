@@ -15,6 +15,7 @@ public class Staircase {
 					// System.out.print(" ");
 					builder.append(" ");
 				}
+				//next commented "k=1" & "2*" are for drawing a tree.
 				for (int /* k=1 */k = 0; k <= (/* 2 **/ j - 1); k++) {
 					// System.out.print("#");
 					builder.append("#");
